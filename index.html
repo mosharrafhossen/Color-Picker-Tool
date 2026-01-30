@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Color Picker Tool</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+    <h2>🎨 Color Picker Tool</h2>
+
+    <!-- Solid Color Picker -->
+    <input type="color" id="colorInput" value="#ff0000">
+
+    <div class="preview" id="preview"></div>
+
+    <div class="row">
+        <span>HEX: <b id="hex">#ff0000</b></span>
+        <button onclick="copyText(hex.textContent)">Copy</button>
+    </div>
+
+    <div class="row">
+        <span>RGB: <b id="rgb">rgb(255, 0, 0)</b></span>
+        <button onclick="copyText(rgb.textContent)">Copy</button>
+    </div>
+
+    <hr>
+
+    <!-- Gradient Picker -->
+    <h3>🌈 Gradient Picker</h3>
+
+    <input type="color" id="gColor1" value="#ff0000">
+    <input type="color" id="gColor2" value="#0000ff">
+
+    <label>Angle: <span id="angleValue">90</span>°</label>
+    <input type="range" id="angle" min="0" max="360" value="90">
+
+    <div class="gradient-box" id="gradientBox"></div>
+
+    <div class="css-code" id="gradientCode"></div>
+    <button style="margin-top:6px" onclick="copyText(gradientCode.textContent)">
+        Copy CSS
+    </button>
+</div>
+<script src="js/custom.js"></script>
+</body>
+</html>
